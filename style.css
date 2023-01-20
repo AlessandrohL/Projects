@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-@import url('./src/stencilla.ttf');
 
 :root{
   --black-pearl: #161616;
@@ -84,8 +83,7 @@ img {
   transform: translate(0, 0);
 }
 
-
-.panel-btn {
+.buttons{
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -100,6 +98,24 @@ img {
   background-color: var(--canary-yellow);
 }
 
+.music-btn {
+  cursor: pointer;
+  left: 1vw;
+  transition: opacity .3s ease;
+}
+
+.music-btn:hover {
+  opacity: 0.7;
+}
+
+.music-btn i {
+  font-size: 2rem;
+}
+
+audio {
+  position: absolute;
+  left: -100;
+}
 
 .menu {
   width: inherit;
@@ -159,7 +175,6 @@ img {
 
 
 .hero img:hover {
-  /* transform: rotate(360deg); */
   filter: none;
 }
 
@@ -238,16 +253,8 @@ img {
   width: 250px;
   max-width: 250px;
   height: 250px;
-  cursor: pointer;
   border-radius: 5px;
-  transition: opacity 0.3s ease;
 }
-
-.album-cover:hover {
-  opacity: 60%;
-  filter: blur(0.7px);
-}
-
 
 .album-title {
   font-size: 1.1rem;
@@ -264,6 +271,17 @@ img {
 
 
 @media only screen and (max-width: 1200px){
+  .hero {
+    align-items: center;
+    background-image: url(/img/SodaPhone.jpg);
+    background-size: cover;
+  }
+
+  .hero img {
+    width: 250px;
+    height: 35px;
+  }
+
   .profiles-container {
     flex-direction: column;
   }

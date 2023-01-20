@@ -1,14 +1,13 @@
 import hamburgerMenu from "./js/menu.js";
+import { tooglePlay } from "./js/aud.js";
 
 const d = document;
+const $icon = d.querySelector(".fa-play");
+const $audio = d.querySelector('audio');
 
 d.addEventListener("DOMContentLoaded", e => {
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
+  tooglePlay(".music-btn", $audio, $icon);
+
 })
 
-
-const $openTab = d.querySelector("#prueba");
-
-$openTab.addEventListener("click", e => {
-  window.open('https://open.spotify.com/album/3i4nU0OIi7gMmXDEhG9ZRt', '_blank');
-})
