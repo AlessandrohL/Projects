@@ -99,24 +99,23 @@ img {
   border: none;
 }
 
-.music-btn {
-  cursor: pointer;
-  left: 1vw;
-  transition: opacity .3s ease;
+.playlist-btn {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;  
+  margin: auto;
+  z-index: 999;
+  background-color: #212121;
+  border-left: none;
 }
 
-.music-btn:hover {
-  opacity: 0.7;
+.playlist-btn i {
+  font-size: 30px;
+  color: #1DB954;
 }
 
-.music-btn i {
-  font-size: 2rem;
-}
-
-audio {
-  position: absolute;
-  left: -100;
-}
 
 .menu {
   width: inherit;
