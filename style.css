@@ -99,6 +99,21 @@ img {
   border: none;
 }
 
+iframe {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  margin: auto;
+  z-index: 999;
+  transform: translate(-200%, 0);
+  transition: transform 0.5s ease;
+}
+
+.iframe-is-active {
+  transform: translate(0, 0);
+}
+
 .playlist-btn {
   height: 50px;
   position: fixed;
@@ -109,6 +124,12 @@ img {
   z-index: 999;
   background-color: #212121;
   border-left: none;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.playlist-btn:hover {
+  opacity: 0.7;
 }
 
 .playlist-btn i {
@@ -300,6 +321,12 @@ img {
 }
 
 @media only screen and (max-width: 900px){
+
+  iframe {
+    width: 250px;
+    left: 35px;
+  }
+
   .title-sections {
     font-size: 40px;
     color: #fff;
