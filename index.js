@@ -6,6 +6,6 @@ const d = document;
 
 d.addEventListener("DOMContentLoaded", e => {
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
-  tooglePlaylist(".playlist-btn", ".iframe");
+  tooglePlaylist(".playlist-btn", ".iframe-container");
 })
 

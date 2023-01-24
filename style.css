@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
-:root{
+:root {
   --black-pearl: #161616;
-  --canary-yellow: #ffef00; 
+  --canary-yellow: #ffef00;
   --pastel-yellow: #fdfd96;
 }
 
-
 html {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -65,7 +64,6 @@ img {
   background: transparent;
 }
 
-
 .panel {
   position: fixed;
   z-index: 998;
@@ -75,7 +73,7 @@ img {
   right: 0;
   width: 100%;
   background-color: black;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   transform: translate(-100%, 0);
 }
 
@@ -83,7 +81,7 @@ img {
   transform: translate(0, 0);
 }
 
-.buttons{
+.buttons {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -99,14 +97,16 @@ img {
   border: none;
 }
 
-iframe {
+.iframe-container {
   position: fixed;
-  top: 0;
+  width: 350px;
+  height: 352px;
   bottom: 0;
-  left: 60px;
+  top: 0;
+  left: 0;
   margin: auto;
   z-index: 999;
-  transform: translate(-200%, 0);
+  transform: translate(-100%, 0);
   transition: transform 0.5s ease;
 }
 
@@ -114,16 +114,29 @@ iframe {
   transform: translate(0, 0);
 }
 
-.playlist-btn {
-  height: 50px;
-  position: fixed;
+.iframe-container iframe {
   top: 0;
-  bottom: 0;
-  left: 0;  
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 0;
+}
+
+.playlist-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 1vh;
+  left: 1vw;
   margin: auto;
   z-index: 999;
   background-color: #212121;
-  border-left: none;
+  border: none;
+  border-radius: 50%;
   transition: opacity 0.4s ease;
   cursor: pointer;
 }
@@ -133,10 +146,10 @@ iframe {
 }
 
 .playlist-btn i {
+  width: inherit;
   font-size: 30px;
-  color: #1DB954;
+  color: #1db954;
 }
-
 
 .menu {
   width: inherit;
@@ -172,11 +185,11 @@ iframe {
   background-image: url(/img/SodaHero.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
   position: relative;
 }
 
-.hero::before{
+.hero::before {
   content: "";
   position: absolute;
   background-color: #161616;
@@ -193,7 +206,6 @@ iframe {
   z-index: 10;
   margin-bottom: 40px;
 }
-
 
 .hero img:hover {
   filter: none;
@@ -289,9 +301,9 @@ iframe {
   color: var(--pastel-yellow);
 }
 
+@media only screen and (max-width: 1200px) {
 
 
-@media only screen and (max-width: 1200px){
   .hero {
     align-items: center;
     background-image: url(/img/SodaPhone.jpg);
@@ -308,7 +320,7 @@ iframe {
   }
 
   .profile {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -316,15 +328,14 @@ iframe {
   .profile-description {
     text-align: center;
     margin: 20p 60px 80px 60px;
-    font-size: 20px  
+    font-size: 20px;
   }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px) {
 
-  iframe {
-    width: 250px;
-    left: 35px;
+  .iframe-container {
+    width: 300px;
   }
 
   .title-sections {
